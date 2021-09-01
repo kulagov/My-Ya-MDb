@@ -1,0 +1,76 @@
+[
+{
+  "model": "api.category",
+  "pk": 1,
+  "fields": {
+    "name": "categories 1",
+    "slug": "categories1"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 2,
+  "fields": {
+    "name": "categories 2",
+    "slug": "categories2"
+  }
+},
+{
+  "model": "api.category",
+  "pk": 3,
+  "fields": {
+    "name": "categories 3",
+    "slug": "categories3"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 1,
+  "fields": {
+    "name": "genre 3",
+    "slug": "genre3"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 2,
+  "fields": {
+    "name": "genre 1",
+    "slug": "genre1"
+  }
+},
+{
+  "model": "api.genre",
+  "pk": 3,
+  "fields": {
+    "name": "genre 2",
+    "slug": "genre2"
+  }
+},
+{
+  "model": "api.title",
+  "pk": 1,
+  "fields": {
+    "name": "title 2",
+    "description": "desc title 2",
+    "year": 2020,
+    "category": 2,
+    "genre": [
+      3
+    ]
+  }
+},
+{
+  "model": "api.title",
+  "pk": 2,
+  "fields": {
+    "name": "title 1",
+    "description": "desc title 1",
+    "year": 2020,
+    "category": 1,
+    "genre": [
+      2
+    ]
+  }
+}
+]
