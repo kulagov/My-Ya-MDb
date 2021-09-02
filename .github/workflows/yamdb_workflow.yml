@@ -18,17 +18,20 @@ jobs:
         python -m pip install --upgrade pip
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install -r requirements.txt
-      env:
+      run: |
+        touch .env
         # echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
         # echo DB_NAME=${{ secrets.DB_NAME }} >> .env
         # echo POSTGRES_USER=${{ secrets.POSTGRES_USER }} >> .env
         # echo POSTGRES_PASSWORD=${{ secrets.POSTGRES_PASSWORD }} >> .env
         # echo DB_HOST=${{ secrets.DB_HOST }} >> .env
         # echo DB_PORT=${{ secrets.DB_PORT }} >> .env
-        SECRET_KEY: ${{ secrets.SECRET_KEY }}
+        echo SECRET_KEY=${{ secrets.SECRET_KEY }} >> .env
+        # SECRET_KEY: ${{ secrets.SECRET_KEY }}
         # echo ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }} >> .env
         # echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
         # echo DEBUG=${{ secrets.DEBUG }} >> .env
+        cat .env
     - name: Test with flake8 and django tests
       run: |
         python -m flake8
