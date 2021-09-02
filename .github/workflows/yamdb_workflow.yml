@@ -19,7 +19,7 @@ jobs:
         pip install flake8 pep8-naming flake8-broken-line flake8-return flake8-isort
         pip install -r requirements.txt
     - name: Create env
-      script: |
+      run: |
         touch .env
         echo DB_ENGINE=${{ secrets.DB_ENGINE }} >> .env
         echo DB_NAME=${{ secrets.DB_NAME }} >> .env
