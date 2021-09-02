@@ -29,10 +29,9 @@ jobs:
         # echo DB_HOST=${{ secrets.DB_HOST }} >> .env
         # echo DB_PORT=${{ secrets.DB_PORT }} >> .env
         echo 'SECRET_KEY=${{ secrets.SECRET_KEY }}' >> .env
-        # SECRET_KEY: ${{ secrets.SECRET_KEY }}
         echo 'ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}' >> .env
-        # echo EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }} >> .env
-        # echo DEBUG=${{ secrets.DEBUG }} >> .env
+        echo 'EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }}' >> .env
+        echo 'DEBUG=${{ secrets.DEBUG }}' >> .env
         python manage.py test
 
   build_and_push_to_docker_hub:
