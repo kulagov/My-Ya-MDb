@@ -8,7 +8,8 @@ services:
     env_file:
       - ./.env
   web:
-    image: kulagov/infra_actions
+    # image: kulagov/infra_actions
+    build: .
     restart: always
     volumes: 
       - static_value:/code/static/
