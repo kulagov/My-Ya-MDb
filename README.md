@@ -1,5 +1,5 @@
 # Проект YaMDb
-![yamdb_workflow workflow](https://github.com/kulagov/yamdb_final/actions/workflows/yamdb_workflow.yml/badge.svg)
+![yamdb_workflow workflow](https://github.com/kulagov/yamdb_final/actions/workflows/yamdb_workflow.yaml/badge.svg)
 
 ## Описание проекта
 Проект YaMDb позволяет собирать отзывы и оценку пользователей на произведения. Для произведений предусмотрена разбивка по категориям и жанрам. Список категорий и жанров определяется администратором. Диаппазон оценок от одного до десяти. Для каждого произведения формируется усредненная оценка - рейтинг (целое число). На одно произведение пользователь может оставить только один отзыв.
