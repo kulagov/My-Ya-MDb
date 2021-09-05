@@ -32,7 +32,6 @@ jobs:
         echo 'ALLOWED_HOSTS=${{ secrets.ALLOWED_HOSTS }}' >> .env
         echo 'EMAIL_ADMIN=${{ secrets.EMAIL_ADMIN }}' >> .env
         echo 'DEBUG=${{ secrets.DEBUG }}' >> .env
-        python manage.py test
         pytest
 
   build_and_push_to_docker_hub:
@@ -71,6 +70,7 @@ jobs:
           sudo docker pull ${{ secrets.DOCKER_USERNAME  }}/infra_actions:latest
           sudo docker-compose stop
           sudo docker-compose rm web
+          rm .env
           touch .env
           echo 'DB_ENGINE=${{ secrets.DB_ENGINE }}' >> .env
           echo 'DB_NAME=${{ secrets.DB_NAME }}' >> .env
